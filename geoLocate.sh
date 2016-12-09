@@ -5,7 +5,7 @@
 while read line
 do
     ipcim=$line
-    COUNTRY=`geoiplookup -f "/root/GeoIP/GeoIP.dat" $ipcim| cut -d' ' -f4| cut -d',' -f1`
+    
 
     
     curl -s --data "IP=$ipcim" http://software77.net/geo-ip/ >/tmp/.kib_loc
